@@ -1,0 +1,525 @@
+// 顏色變數
+$action-green: #12D47E
+$rotate1-blue: #136174
+$rotate2-brown: #573619
+$rotate3-green: #106A50
+$rotate4-purple: #42355E
+
+//
+
+
+::-webkit-scrollbar
+  display: none
+
+*
+  // border: 1px solid black
+  box-sizing: border-box
+  position: relative
+  font-family: "蘋方體", "微軟正黑體"
+
+html, body
+  margin: 0px
+  padding: 0px
+
+section#intro
+  background: linear-gradient(127deg, #3DCAEE 0%, #12D47E 100%)
+  padding-bottom: 15vh
+  padding-top: 2vw
+
+img
+  width: 100%
+  height: 100%
+
+.nav
+  height: 10vh
+  font-size: 0px
+  .logo
+    top: 50%
+    transform: translateY(-50%)
+    display: inline-block
+    width: 14.4%
+    left: 7%
+    vertical-align: top
+    position: absolute
+    cursor: pointer
+
+.rig-container
+  vertical-align: top
+  font-size: 0px
+  letter-spacing: 2px
+  display: inline-flex
+  justify-content: flex-end
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 12.9%
+  font-weight: 200
+  p
+    margin: 0px
+    padding: 0px
+    top: 50%
+    transform: translateY(-50%)
+.rig
+  font-size: 1.4vw
+  color: white
+  width: 80px
+  width: 7.8vw
+  height: 3vw
+  border-radius: 7px
+  border: 2px solid white
+  text-align: center
+  margin-right: 2.2vw
+  cursor: pointer
+
+.log-in
+  font-size: 1.4vw
+  color: #1FD1A0
+  width: 80px
+  width: 7.8vw
+  height: 3vw
+  border-radius: 7px
+  border: 1px solid white
+  text-align: center
+  background: white
+  cursor: pointer
+
+.menu
+  vertical-align: top
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  font-size: 0px
+  width: 2.3vw
+  right: 7.1vw
+  cursor: pointer
+  .line
+    width: 2.3vw
+    height: 0.25vw
+    border-radius: 0.1vw
+    background-color: white
+
+#line1, #line2
+  margin-bottom: 0.5vw
+
+
+.container
+  left: 9.5%
+  width: calc(100% - 19%)
+  height: 37vw
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  // padding-top: 15vh
+
+// 左邊文字部分
+
+.intro-content-container
+  width: 41.2%
+  .sub-title
+    display: block
+    font-size: 3vw
+    letter-spacing: 0.1vw
+    color: white
+    font-weight: 200
+
+  .title
+    display: block
+    margin-top: 4vw
+    font-size: 7vw
+    letter-spacing: 0.08vw
+    color: white
+    z-index: 1
+    font-weight: 500
+    transition-duration: 1s
+    &::after
+      transition-duration: 1s
+      content: ""
+      display: block
+      height: 3.3vw
+      width: 35vw
+      position: absolute
+      z-index: -10
+      transform: translate(-10vw, -3.8vw)
+      background-color: #136174
+      animation: slide 4s infinite, color-change 12s infinite
+
+  .go-button
+    width: 100%
+    height: 5.6vw
+    background-color: #FFDF43
+    border-radius: 7px
+    margin-top: 6vw
+    cursor: pointer
+    p
+      font-size: 2vw
+      letter-spacing: 0.4vw
+      text-align: center
+      margin: 0px
+      padding: 0px
+      color: black
+      top: 50%
+      transform: translateY(-50%)
+
+// 動畫 滑動部分
+@-webkit-keyframes slide
+  0%
+    width: 0vw
+  25%
+    width: 35vw
+  75%
+    width: 35vw
+  100%
+    width: 0vw
+
+@-o-keyframes slide
+  0%
+    width: 0vw
+  25%
+    width: 35vw
+  75%
+    width: 35vw
+  100%
+    width: 0vw
+
+@-moz-keyframes slide
+  0%
+    width: 0vw
+  25%
+    width: 35vw
+  75%
+    width: 35vw
+  100%
+    width: 0vw
+
+@keyframes slide
+  0%
+    width: 0vw
+  25%
+    width: 35vw
+  75%
+    width: 35vw
+  100%
+    width: 0vw
+
+// 動畫 顏色改變部分
+
+@-webkit-keyframes color-change
+  0%
+    background-color: $rotate1-blue
+  33%
+    background-color: $rotate1-blue
+  33.3%
+    background-color: $rotate2-brown
+  66%
+    background-color: $rotate2-brown
+  66.6%
+    background-color: $rotate3-green
+  99.5%
+    background-color: $rotate3-green
+  100%
+    background-color: $rotate4-purple
+@-o-keyframes color-change
+  0%
+    background-color: $rotate1-blue
+  33%
+    background-color: $rotate1-blue
+  33.3%
+    background-color: $rotate2-brown
+  66%
+    background-color: $rotate2-brown
+  66.6%
+    background-color: $rotate3-green
+  99.5%
+    background-color: $rotate3-green
+  100%
+    background-color: $rotate4-purple
+@-moz-keyframes color-change
+  0%
+    background-color: $rotate1-blue
+  33%
+    background-color: $rotate1-blue
+  33.3%
+    background-color: $rotate2-brown
+  66%
+    background-color: $rotate2-brown
+  66.6%
+    background-color: $rotate3-green
+  99.5%
+    background-color: $rotate3-green
+  100%
+    background-color: $rotate4-purple
+@keyframes color-change
+  0%
+    background-color: $rotate1-blue
+  33%
+    background-color: $rotate1-blue
+  33.3%
+    background-color: $rotate2-brown
+  66%
+    background-color: $rotate2-brown
+  66.6%
+    background-color: $rotate3-green
+  99.5%
+    background-color: $rotate3-green
+  100%
+    background-color: $rotate4-purple
+
+.illustration
+  width: 51.6%
+  img
+    width: 100%
+    height: auto
+
+section#items
+  padding-top: 8vw
+  padding-bottom: 8vw
+
+.item-container
+  margin-left: auto
+  margin-right: auto
+  width: 81vw
+  display: flex
+  justify-content: space-between
+  .item
+    cursor: pointer
+    width: 8.2vw
+    border-radius: 100px
+    &:hover
+      p
+        // color: $action-green
+        // border-bottom: 1px solid $action-green
+    img
+      width: 100%
+      height: 100%
+      display: block
+    p
+      font-size: 1.5vw
+      letter-spacing: 0.1em
+      text-align: center
+      color: #4A4A4A
+      margin-top: 0.88em
+      margin-bottom: 0
+      font-weight: 200
+      transition-duration: 0.3s
+
+#item-container2
+  margin-top: 55px
+
+.content-title
+  font-size: 2.5vw
+  color: #545454
+  letter-spacing: 0.12em
+  display: block
+  vertical-align: top
+  font-weight: 500
+
+.content
+  font-size: 1.4vw
+  color: #5C5C5C
+  letter-spacing: 0.15em
+  text-align: justify
+  display: inline-block
+  vertical-align: top
+  line-height: 1.69em
+  font-weight: 200
+
+
+.location-container
+  left: 9.5%
+  width: 81%
+  display: flex
+  justify-content: space-between
+  .place-img
+    width: 27%
+    display: inline-block
+    vertical-align: top
+    img
+      height: auto
+
+  .content-container
+    width: 60%
+    display: inline-block
+
+  .content-title
+    margin-top: 0.5em
+
+  .content
+    margin-top: 1.5em
+
+
+#location-container1
+  padding-bottom: 6vw
+
+#location-container2
+  padding-bottom: 3vw
+
+.stars-container
+  display: inline-block
+  position: absolute
+  top: 75%
+
+.star
+  display: inline-block
+  margin-top: 3.5em
+  margin-right: 0.5vw
+  width: 1.5vw
+  vertical-align: top
+
+.dark
+  img
+    -webkit-filter: grayscale(100%)
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%)
+
+.numbs
+  // position: absolute
+  display: inline
+  color: #8E8E8E
+  font-size: 1.2vw
+  vertical-align: bottom
+  margin-left: 1rem
+
+.action-button
+  margin: 0 auto
+  width: 42.7vw
+  height: 3.9vw
+  background-color: $action-green
+  border-radius: 0.7vw
+  margin-bottom: 8vw
+  font-weight: 300
+  cursor: pointer
+  p
+    color: white
+    text-align: center
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 1.4vw
+    letter-spacing: 0.35vw
+
+section#video
+  // padding-top: 10vw
+  height: 81vw
+  padding-bottom: 36%
+  iframe
+    // position: absolute
+    display: block
+    margin: 0 auto
+
+section#tourist
+  margin-top: -28vw
+  height: auto
+  padding-bottom: 10vw
+
+.tourist-container
+  display: flex
+  justify-content: space-between
+  width: 81%
+  margin: 0 auto
+  height: 100%
+  .left-content-container
+    padding-top: 2vw
+    padding-bottom: 2vw
+    width: 50%
+    .content
+      margin-top: 4vw
+    .action-button
+      width: 100%
+      margin-top: 4vw
+      margin-bottom: 0
+  .right-imgs-container
+    font-size: 0
+    width: 37.5%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    font-size: 0
+    align-content: space-between
+  .tourist
+    width: 45%
+    font-size: 0
+    img
+      width: 100%
+      height: auto
+      // position: absolute
+
+footer
+  background: linear-gradient(127deg, #3DCAEE 0%, #12D47E 100%)
+  padding-top: 3vw
+  padding-bottom: 3vw
+  font-weight: 100
+.footer-container
+  width: 81%
+  margin: 0 auto
+  color: white
+  display: flex
+  justify-content: space-between
+.left-info-container
+  width: 29%
+  padding-right: 2vw
+  .logo
+    width: 66%
+  .info
+    width: 100%
+    margin-top: 1.5vw
+    font-size: 1.2vw
+    letter-spacing: 0.2vw
+    text-align: justify
+  .email
+    font-size: 1.2vw
+    letter-spacing: 0.1vw
+    margin-top: 1vw
+
+.link-container
+  .title
+    font-size: 1.5vw
+    letter-spacing: 0.2vw
+    padding-bottom: 1vw
+    padding-right: 7vw
+    border-bottom: 2px solid white
+    margin-bottom: 2vw
+    font-weight: 300
+  a
+    display: block
+    text-decoration: none
+    color: inherit
+    font-size: 1.2vw
+    letter-spacing: 0.2vw
+    padding-bottom: 0.5vw
+
+.social-container-right
+  width: 12vw
+
+.social-container
+  width: 12vw
+  height: 7vw
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-content: space-between
+  position: absolute
+  bottom: 1vw
+
+.social
+  // position: absolute
+  // display: inline-block
+  width: 2.7vw
+  height: 2.7vw
+  margin-left: 0.5vw
+  margin-right: 0.5vw
+  img
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: auto
+#tr-c,#tr-w
+  img
+    height: 100%
+    width: auto
+
+.no-show
+  opacity: 0
+  z-index: 5
+  transition-duration: 0.3s
+  cursor: pointer
+  &:hover
+    opacity: 1
